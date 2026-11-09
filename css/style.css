@@ -356,6 +356,19 @@ h3 {
   font-weight: 600; letter-spacing: -0.04em; line-height: 0.94;
 }
 .cell--word p:not(.word), .cell__link span:not(.word) { max-width: 13em; }
+.cell__wa { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.cell__link .wa-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  max-width: none;
+  padding: 10px 18px 10px 12px;
+  background: #0B7A3E; color: #fff;
+  font-weight: 600; line-height: 1; white-space: nowrap;
+  border-radius: var(--round);
+  transition: background-color var(--t-hover) ease, transform var(--t-hover) ease;
+}
+.cell__link .wa-pill span { max-width: none; }
+.wa-ico { width: 1.5em; height: 1.5em; flex: none; }
+.cell__link:hover .wa-pill { background: #096632; transform: translateY(-2px); }
 
 /* --------------------------------------------------------------------------
    Ensino: arco cortado pela margem e pontos marcados
@@ -678,6 +691,8 @@ h3 {
   transition: transform 450ms var(--ease-out), background-color var(--t-hover) ease;
 }
 .zap:hover { background: var(--red); }
+.zap { gap: 10px; }
+.zap .wa-ico { width: 1.35em; height: 1.35em; }
 .zap:focus-visible { outline: 3px solid var(--red); }
 .js .zap { transform: translateX(110%); }
 .js .zap.is-on { transform: none; }
